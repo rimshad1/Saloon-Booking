@@ -24,32 +24,30 @@ const page = () => {
     {
       id: 1,
       imageUrl: sal1.src,
-      title: "Choose your career",
+      title: "Saloon Rish",
       description: "Career guidance",
+      location: "Matara",
     },
     {
       id: 2,
       imageUrl: sal2.src,
-      title: "Rhythm of London",
+      title: "Skin-laundry",
       description: "Dance show",
+      location: "Galle",
     },
     {
       id: 3,
       imageUrl: sal3.src,
-      title: "Kalyana samayal saatham",
+      title: "Hair cut",
       description: "Food",
+      location: "Colombo",
     },
     {
       id: 4,
       imageUrl: sal4.src,
-      title: "Science World",
+      title: "Saloon World",
       description: "£ 100 Onwards",
-    },
-    {
-      id: 5,
-      imageUrl: sal5.src,
-      title: "Moonkil Kaatre",
-      description: "Music",
+      location: "Trincomalee",
     },
   ];
 
@@ -61,13 +59,19 @@ const page = () => {
             width: "100%",
             display: "flex",
             flexWrap: "wrap",
-            justifyContent: "center",
+            justifyContent: "start",
             gap: "1.3%",
           }}
         >
           {events.map((event, index) => (
             <div
-              style={{ width: "24%", border: "1px solid #d3d3d3", height: 200 }}
+              style={{
+                width: "24%",
+                border: "1px solid #d3d3d3",
+                height: 250,
+                borderRadius: "10px",
+                transition: "transform 0.3s ease, 0.3s ease",
+              }}
               key={index}
             >
               <div
@@ -75,14 +79,17 @@ const page = () => {
                   height: "60%",
                   backgroundImage: `url(${event.imageUrl})`,
                   cursor: "pointer",
+                  borderTopRightRadius: "8px",
+                  borderTopLeftRadius: "8px",
                 }}
               ></div>
               <div
                 style={{
                   height: "20%",
                   display: "flex",
-                  justifyContent: "center",
+                  justifyContent: "start",
                   alignItems: "center",
+                  padding: "0 10px",
                 }}
               >
                 {event.title}
@@ -91,8 +98,9 @@ const page = () => {
                 style={{
                   height: "20%",
                   display: "flex",
-                  justifyContent: "center",
+                  justifyContent: "start",
                   alignItems: "center",
+                  padding: "0 10px",
                 }}
               >
                 {event.description}
