@@ -183,7 +183,7 @@ const Navbar = () => {
         }}
       >
         <div {...StyleX.props(styles.navBar)}>
-          <Link href='/' {...StyleX.props(styles.logoText)}>
+          <Link href='/public' {...StyleX.props(styles.logoText)}>
             My Saloon
           </Link>
           <input
