@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import * as StyleX from "@stylexjs/stylex";
 import Image from "next/image";
@@ -6,6 +7,7 @@ import sal2 from "../../../public/assets/sal2.jpg";
 import sal3 from "../../../public/assets/sal3.jpg";
 import sal4 from "../../../public/assets/sal4.jpg";
 import sal5 from "../../../public/assets/sal5.jpg";
+import { useRouter } from "next/navigation";
 
 const x = StyleX.create({
   centerChild: {
@@ -20,6 +22,8 @@ const x = StyleX.create({
 });
 
 const page = () => {
+  const router = useRouter();
+
   const events = [
     {
       id: 1,
@@ -49,6 +53,13 @@ const page = () => {
       description: "£ 100 Onwards",
       location: "Trincomalee",
     },
+    {
+      id: 5,
+      imageUrl: sal5.src,
+      title: "Saloon World",
+      description: "£ 100 Onwards",
+      location: "Trincomalee",
+    },
   ];
 
   return (
@@ -71,7 +82,9 @@ const page = () => {
                 height: 250,
                 borderRadius: "10px",
                 transition: "transform 0.3s ease, 0.3s ease",
+                cursor: "pointer",
               }}
+              onClick={() => router.push("/saloonDetails")}
               key={index}
             >
               <div
