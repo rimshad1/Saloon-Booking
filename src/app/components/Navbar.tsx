@@ -229,7 +229,6 @@ const Navbar = () => {
               >
                 Home
               </div>
-
               <div
                 {...StyleX.props(
                   styles.navItems(path, "/service"),
@@ -238,24 +237,6 @@ const Navbar = () => {
                 onClick={() => router.replace("/service")}
               >
                 Service
-              </div>
-              <div
-                {...StyleX.props(
-                  styles.navItems(path, "/contact"),
-                  styles.centerChild
-                )}
-                onClick={() => router.replace("/contact")}
-              >
-                Contact
-              </div>
-              <div
-                {...StyleX.props(
-                  styles.navItems(path, "/about"),
-                  styles.centerChild
-                )}
-                onClick={() => router.replace("/about")}
-              >
-                About
               </div>
               <div
                 {...StyleX.props(
@@ -268,12 +249,21 @@ const Navbar = () => {
               </div>
               <div
                 {...StyleX.props(
-                  styles.navItems(path, "/appointment"),
+                  styles.navItems(path, "/about"),
                   styles.centerChild
                 )}
-                onClick={() => router.replace("/appointment")}
+                onClick={() => router.replace("/about")}
               >
-                Appointment
+                About
+              </div>
+              <div
+                {...StyleX.props(
+                  styles.navItems(path, "/contact"),
+                  styles.centerChild
+                )}
+                onClick={() => router.replace("/contact")}
+              >
+                Contact Us
               </div>
               <div
                 {...StyleX.props(styles.loginBtn)}
