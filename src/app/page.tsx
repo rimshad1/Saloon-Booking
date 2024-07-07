@@ -86,7 +86,7 @@ export default function Home() {
         >
           <div {...StyleX.props(x.filterDiv2)}>
             <select {...StyleX.props(x.filterInput)}>
-              <option value=''>Category</option>
+              <option value=''>Location</option>
               <option>Name</option>
             </select>
           </div>
@@ -114,7 +114,7 @@ export default function Home() {
           ></div>
           <div {...StyleX.props(x.filterDiv2)}>
             <select {...StyleX.props(x.filterInput)}>
-              <option value=''>Category</option>
+              <option value=''>Place</option>
               <option>Name</option>
             </select>
           </div>
@@ -152,7 +152,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-            <Saloon />
+        <Saloon />
       </div>
     </main>
   );
